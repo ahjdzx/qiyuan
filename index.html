@@ -49,11 +49,11 @@
 
       .games {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
         gap: 18px;
         margin-top: 26px;
       }
-      @media (max-width: 640px) { .games { grid-template-columns: 1fr; } }
+      @media (max-width: 560px) { .games { grid-template-columns: 1fr; } }
 
       .game {
         display: block;
@@ -95,6 +95,8 @@
         text-indent: 0.18em;
       }
       .game.black .go { background: #c7d3df; }
+      .game.stone .seal { color: #eef2f6; background: rgba(20, 22, 28, 0.8); border-color: rgba(255, 255, 255, 0.25); }
+      .game.stone .go { background: #f2efe4; color: #2a2a30; }
       .game:hover .go { transform: scale(1.04); }
       .go { transition: transform 0.3s var(--ease); }
 
@@ -123,9 +125,16 @@
           <p>马走日、象走田、炮要隔山打。小军队在棋盘上自己下象棋，你也可以接管一方，来一盘真棋！</p>
           <span class="go">去下棋</span>
         </a>
+
+        <a class="game stone" href="https://ahjdzx.github.io/weiqi/">
+          <span class="seal">弈</span>
+          <h2>围起来<small>围棋</small></h2>
+          <p>黑子白子轮流放，围住对方就能提子。小棋手们自己下整盘，你也可以亲手围一块大好地盘！</p>
+          <span class="go">围起来</span>
+        </a>
       </div>
 
-      <footer>适合一年级小朋友 · 打开就能玩，不用安装任何东西</footer>
+      <footer>适合一年级小朋友 · 打开就能玩，不用安装任何东西 · 棋盘都是 3D 的哦</footer>
     </main>
   </body>
 </html>
